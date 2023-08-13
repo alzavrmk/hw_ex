@@ -64,11 +64,17 @@ public class Main {
         Scanner iScanner = new Scanner(System.in);
         System.out.println("Введите строку: ");
         String str = iScanner.nextLine();
-        if (str.length()!= 0){
-            System.out.println("Вы ввели строку: "+ str);
-        } else {
-            System.out.println("Пустые строки вводить нельзя");
-        }
+        if ((str == null) || (str.length() == 0)) {
+            System.out.println("Пустые строки вводить нельзя!");
+        }else {
+            String str1 = str.trim();
+            if (str1.isEmpty()){
+                System.out.println("Вы ввели пробелы!");
+            }else {
+                System.out.println("Вы ввели строку: "+ str);
+            }
+
+            }
     }
 
 }
